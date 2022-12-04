@@ -3,7 +3,7 @@ body {
 }
 
 h1 {
-  color: palevioletred;
+  color: whitesmoke;
   font-size: 24px;
   font-weight: 100;
   line-height: 28px;
@@ -35,6 +35,7 @@ li {
   padding: 20px;
   border: 1px solid #9970f0;
   border-radius: 5px;
+  background-image: url("https://images.unsplash.com/photo-1591625677777-ae053aef58ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
 }
 
 .overview {
@@ -46,7 +47,7 @@ li {
 }
 
 .weather-temperature strong {
-  color: palevioletred;
+  color: whitesmoke;
   font-size: 64px;
   line-height: 1;
   font-weight: 400;
