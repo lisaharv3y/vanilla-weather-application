@@ -30,6 +30,11 @@ li {
   text-transform: capitalize;
 }
 
+#fahrenheit,
+#celsius {
+  text-decoration: none;
+}
+
 .weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
@@ -61,4 +66,13 @@ li {
   position: relative;
   font-size: 16px;
   top: -30px;
+}
+
+.weather-temperature .active {
+  color: darkslategrey;
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
 }
