@@ -89,8 +89,9 @@ li {
 
 .forecast-temp {
   font-size: 13px;
+  color: darkslategrey;
 }
 
 .forecase-temp-low {
-  opacity: 0.5;
+  opacity: 0.6;
 }
