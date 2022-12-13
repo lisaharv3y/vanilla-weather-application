@@ -11,7 +11,8 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -35,6 +36,12 @@ function displayForecast() {
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "f38a083dtf10b64a59b3baa446e088o9";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&unites=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayTemperature(response) {
@@ -65,6 +72,8 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.condition.description);
 
   celsiusTemperature = response.data.temperature.current;
+
+  getForecast(response.data.coordinates);
 }
 
 function search(city) {
@@ -108,4 +117,3 @@ let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", displayFahrenheit);
 
 search("Toronto");
-displayForecast();
