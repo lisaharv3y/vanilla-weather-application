@@ -30,9 +30,9 @@ li {
   text-transform: capitalize;
 }
 
-#fahrenheit,
 #celsius {
   text-decoration: none;
+  font-size: larger;
 }
 
 .weather-app-wrapper {
